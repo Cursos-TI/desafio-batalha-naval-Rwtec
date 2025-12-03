@@ -8,23 +8,20 @@ int main(){
 
     char coluna [10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
     int  linha  [10] = {1,2,3,4,5,6,7,8,9,10};
-    int  navio  [3] = {3, 3, 3};  //NAVIOS , CADA UM COM 3 POSIÇÕES
+    int  navio_horizontal [3] = {3, 3, 3};  //NAVIOS , CADA UM COM 3 POSIÇÕES
+    int navio_vertical[3] = {3,3,3};
     int i,j;
     //POSIÇÕES DOS NAVIOS (CADA NAVIO OCUPA 3 POSIÇÕES CONSECUTIVAS)
     //NAVIO 1: POSIÇÕES : (0,0),(0,1),(0,2)-HORIZONTAL
-    for (int j = 0 ; j < navio [0]; j++){
+    for (int j = 0 ; j < navio_horizontal [0]; j++){
         tabuleiro [0][j] = 3;
     }
-    //NAVIO 1: POSIÇÕES : (3,4),(4,4),(5,4)-VERTICAL
-    for ( i = 3; i < 3 + navio [1]; i++)
+    //NAVIO 2: POSIÇÕES : (3,4),(4,4),(5,4)-VERTICAL
+    for ( i = 3; i < 3 + navio_vertical [1]; i++)
     {
         tabuleiro [i][4] = 3;
     }
-    //NAVIO 1: POSIÇÕES : (7,6),(7,7),(7,8)-HORIZONTAL
-    for (j = 6; j < 6 + navio [2]; j++)
-    {
-        tabuleiro [7][j] = 3;
-    }
+    
 
      printf("TABULEIRO BATALHA NAVAL!\n");
      printf("   ");
